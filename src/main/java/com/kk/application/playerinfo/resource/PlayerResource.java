@@ -30,6 +30,13 @@ public class PlayerResource {
     @Autowired
     PlayerRepository repository;
 
+    /**
+     *  T
+     * @param page
+     * @param size
+     * @param sortField
+     * @return
+     */
     @GetMapping(URIConstants.GET_ALL_PLAYERS_FULL_RECORD)
     public ResponseEntity<List<PlayerRecordResponseDto>> retrieveAllPlayersRecords(
             @RequestParam(required = false, name = "page",
@@ -220,6 +227,10 @@ public class PlayerResource {
         return playerDaoService.fetchWorstScores(name);
     }
 
+    /**
+     *
+     * VALID DATE FORMAT : YYYY-MM-DD
+     */
     @GetMapping(URIConstants.GET_INDIVIDUAL_PLAYER_SCORE_BETWEEN_GIVEN_PERIOD_RECORDS_BY_PLAYER_NAME)
     public ResponseEntity<List<PlayerRecordResponseDto>> retrievePlayerScoresForPeriod(
             @PathVariable String name,
@@ -248,6 +259,9 @@ public class PlayerResource {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * VALID DATE FORMAT : YYYY-MM-DD
+     */
     @GetMapping(URIConstants.GET_INDIVIDUAL_PLAYER_SCORE_RECORDS_SINCE_BY_PLAYER_NAME)
     public ResponseEntity<List<PlayerRecordResponseDto>>  retrievePlayerScoresSince(
             @PathVariable String name,
@@ -272,6 +286,9 @@ public class PlayerResource {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * VALID DATE FORMAT : YYYY-MM-DD
+     */
     @GetMapping(URIConstants.GET_INDIVIDUAL_PLAYER_SCORE_RECORDS_BEFORE_SPECIFIC_DATE__BY_PLAYER_NAME)
     public ResponseEntity<List<PlayerRecordResponseDto>> retrievePlayerScoresBefore(
             @PathVariable String name,
@@ -294,6 +311,10 @@ public class PlayerResource {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     *
+      * VALID DATE FORMAT : YYYY-MM-DD
+     */
     @GetMapping(URIConstants.GET_MULTIPLE_PLAYER_SCORE_RECORDS_BEFORE_SPECIFIC_DATE__BY_PLAYER_NAME)
     public ResponseEntity<?> retrievePlayerBulkScoresBefore(
             @PathVariable String targetDate,

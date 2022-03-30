@@ -1,3 +1,7 @@
+CREATE DATABASE playerDB;
+
+USE playerDB;
+
 CREATE TABLE IF NOT EXISTS  player (
  player_id INT(8),
  player_name VARCHAR(60) NOT NULL,
@@ -7,7 +11,7 @@ CREATE TABLE IF NOT EXISTS  player (
  );
 
 DROP table player;
-
+-------------- This is just sample ------------------
 INSERT INTO player VALUES(10, 'virat', 100, now());
 INSERT INTO player VALUES(10, 'virat', 100, now());
 INSERT INTO player VALUES(11, 'sachin', 20, now());
