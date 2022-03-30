@@ -11,14 +11,14 @@
 * Postman
 
 ## Code Repo Download
-``
-$ cd ${your_code_checkout_dir}
-$ git clone --single-branch --branch master https://github.com/kaulkartik/playerinfo.git
-``
+```bash
+cd {your_code_checkout_dir}
+git clone --single-branch --branch master https://github.com/kaulkartik/playerinfo.git
+```
 
 ## Databse Setup 
 * download the my sql server from https://dev.mysql.com/downloads/mysql/
-``
+```bash
 $ export MYSQL_HOME=/usr/local/mysql 
 $ alias start_mysql='sudo $MYSQL_HOME/bin/mysqld_safe &'
 $ alias stop_mysql='sudo $MYSQL_HOME/bin/mysqladmin shutdown'
@@ -26,7 +26,7 @@ $ start_mysql
 $ Intialise the MYSQL on default port 3306
 $ In the work bench execute the following commands in /src/main/resources/project.sql in serial way
 $ Use My SQL work bench and to connect  
-`` 
+```` 
 
 ## Editor Run 
 * import project as existing git project in Intelliji
